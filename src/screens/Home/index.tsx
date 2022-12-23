@@ -18,7 +18,7 @@ const data = {
     price: 789,
   },
   thumbnail:
-    'https://img2.gratispng.com/20180205/jde/kisspng-chevrolet-camaro-car-chevrolet-chevelle-chevrolet-yellow-camaro-png-hd-5a7826dd3e7b46.2796944015178237092559.jpg',
+    'http://1.bp.blogspot.com/-h-ks_GfSsTc/UljwZIEjgpI/AAAAAAAAZV8/2z1YD-grUR0/s1600/Carros-em-png-queroimagem-Cei%C3%A7a-Crispim+(7).png',
 };
 
 export const Home = () => {
