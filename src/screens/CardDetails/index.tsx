@@ -14,6 +14,7 @@ import {
   Price,
   About,
   WrapperAccessory,
+  Footer,
 } from './styles';
 
 import { BackButton } from '../../components/BackButton';
@@ -26,6 +27,7 @@ import steering from '../../assets/steering-wheel.svg';
 import drop from '../../assets/drop.svg';
 import exchange from '../../assets/exchange.svg';
 import people from '../../assets/people.svg';
+import { Button } from '../../components/Button';
 
 export const CardDetails = () => {
   return (
@@ -70,6 +72,10 @@ export const CardDetails = () => {
           para quem gosta de acelerar.
         </About>
       </Content>
+
+      <Footer>
+        <Button title="Confirmar" />
+      </Footer>
     </Container>
   );
 };
