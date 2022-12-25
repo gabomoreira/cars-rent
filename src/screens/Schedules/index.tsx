@@ -2,6 +2,10 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 
 import { BackButton } from '../../components/BackButton';
+import { StatusBar } from 'react-native';
+import { Button } from '../../components/Button';
+
+import ArrowSvg from '../../assets/arrow-right.svg';
 
 import {
   Container,
@@ -11,10 +15,10 @@ import {
   DateInfo,
   DateTitle,
   DateValue,
+  Content,
+  Footer,
 } from './styles';
-
-import ArrowSvg from '../../assets/arrow-right.svg';
-import { StatusBar } from 'react-native';
+import { Calendar } from '../../components/Calendar';
 
 export const Schedules = () => {
   const theme = useTheme();
@@ -50,6 +54,14 @@ export const Schedules = () => {
           </DateInfo>
         </RentalPeriod>
       </Header>
+
+      <Content>
+        <Calendar />
+      </Content>
+
+      <Footer>
+        <Button title="Confirmar" />
+      </Footer>
     </Container>
   );
 };
