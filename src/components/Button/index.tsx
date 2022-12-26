@@ -1,8 +1,9 @@
 import React from 'react';
+import { TouchableHighlightProps } from 'react-native';
 
 import { Container, Title } from './styles';
 
-interface IButtonProps {
+interface IButtonProps extends TouchableHighlightProps {
   title: string;
   color?: string;
 }

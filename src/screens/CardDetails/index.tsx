@@ -29,7 +29,11 @@ import exchange from '../../assets/exchange.svg';
 import people from '../../assets/people.svg';
 import { Button } from '../../components/Button';
 
-export const CardDetails = () => {
+export const CardDetails = ({ navigation }) => {
+  const handleConfimation = () => {
+    navigation.navigate('Schedules');
+  };
+
   return (
     <Container>
       <Header>
@@ -74,7 +78,7 @@ export const CardDetails = () => {
       </Content>
 
       <Footer>
-        <Button title="Confirmar" />
+        <Button title="Confirmar" onPress={() => handleConfimation()} />
       </Footer>
     </Container>
   );

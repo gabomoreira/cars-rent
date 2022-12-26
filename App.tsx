@@ -11,13 +11,9 @@ import {
   Archivo_600SemiBold,
 } from '@expo-google-fonts/archivo';
 
-import { Home } from './src/screens/Home';
-import AppLoading from 'expo-app-loading';
 import theme from './src/global/styles/theme';
-import { CardDetails } from './src/screens/CardDetails';
-import { Schedules } from './src/screens/Schedules';
-import { ScheduleDetails } from './src/screens/ScheduleDetails';
-import { ScheduleComplete } from './src/screens/ScheduleComplete';
+
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,7 +30,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <ScheduleComplete />
+      <Routes />
     </ThemeProvider>
   );
 }

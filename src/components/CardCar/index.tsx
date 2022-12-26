@@ -1,4 +1,6 @@
 import React from 'react';
+import { TouchableHighlightProps } from 'react-native';
+import { RectButtonProps } from 'react-native-gesture-handler';
 
 import {
   Container,
@@ -26,13 +28,13 @@ interface CarData {
   thumbnail: string;
 }
 
-interface ICardCarProps {
+interface ICardCarProps extends TouchableHighlightProps {
   data: CarData;
 }
 
-export const CardCar = ({ data }: ICardCarProps) => {
+export const CardCar = ({ data, ...rest }: ICardCarProps) => {
   return (
-    <Container>
+    <Container {...rest}>
       <Wrapper>
         <Content>
           <BrandAndModelContainer>
@@ -44,7 +46,7 @@ export const CardCar = ({ data }: ICardCarProps) => {
             <Period>{data?.rent?.period}</Period>
             <PriceContainer>
               <Price>{`R$ ${data?.rent?.price}`}</Price>
-              <Icon source={require('../../assets/drop.png')} />
+              <Icon source={require('../../assets/drop.svg')} />
             </PriceContainer>
           </Details>
         </Content>

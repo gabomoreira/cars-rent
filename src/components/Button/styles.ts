@@ -1,3 +1,4 @@
+import { TouchableHighlight } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
@@ -6,7 +7,7 @@ interface IContainerProps extends RectButtonProps {
   color?: string;
 }
 
-export const Container = styled(RectButton)<IContainerProps>`
+export const Container = styled(TouchableHighlight)<IContainerProps>`
   width: 100%;
 
   padding: 19px;

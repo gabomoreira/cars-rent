@@ -1,5 +1,7 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'react-native';
+
 import { CardCar } from '../../components/CardCar';
 
 import {
@@ -21,7 +23,15 @@ const data = {
     'http://1.bp.blogspot.com/-h-ks_GfSsTc/UljwZIEjgpI/AAAAAAAAZV8/2z1YD-grUR0/s1600/Carros-em-png-queroimagem-Cei%C3%A7a-Crispim+(7).png',
 };
 
-export const Home = () => {
+export const Home = ({ navigation }) => {
+  // const navigation = useNavigation();
+
+  const handleCarDetails = () => {
+    console.log('ok');
+
+    navigation.navigate('CarDetails');
+  };
+
   return (
     <Container>
       <StatusBar
@@ -40,7 +50,9 @@ export const Home = () => {
       <CardContainer
         data={[1, 2, 3, 4, 5, 6, 7]}
         keyExtractor={(item) => String(item)}
-        renderItem={({ item }) => <CardCar data={data} />}
+        renderItem={({ item }) => (
+          <CardCar data={data} onPress={() => handleCarDetails()} />
+        )}
       />
     </Container>
   );

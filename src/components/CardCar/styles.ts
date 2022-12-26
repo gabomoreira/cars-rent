@@ -1,7 +1,9 @@
+import { TouchableHighlight } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled(TouchableHighlight)`
   width: 100%;
 
   border-radius: 5px;
