@@ -17,6 +17,7 @@ import theme from './src/global/styles/theme';
 import { CardDetails } from './src/screens/CardDetails';
 import { Schedules } from './src/screens/Schedules';
 import { ScheduleDetails } from './src/screens/ScheduleDetails';
+import { ScheduleComplete } from './src/screens/ScheduleComplete';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -33,7 +34,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <ScheduleDetails />
+      <ScheduleComplete />
     </ThemeProvider>
   );
 }
